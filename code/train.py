@@ -33,7 +33,7 @@ def get_last_file(path):
     return latest_file
 
 def get_git_revision_short_hash():
-    return subprocess.check_output(['!git', 'rev-parse', '--short', 'HEAD']).decode('ascii').strip()
+    return subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode('ascii').strip()
 
 
 config = get_config(sys.argv[1])
