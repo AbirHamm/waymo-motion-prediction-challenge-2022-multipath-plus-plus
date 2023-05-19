@@ -32,7 +32,7 @@ def get_last_file(path):
     latest_file = max(list_of_files, key=os.path.getctime)
     return latest_file
 
-def get_git_revision_short_hash():
+def get_git_revision_short_hash() -> str :
     return subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode('ascii').strip()
 
 
