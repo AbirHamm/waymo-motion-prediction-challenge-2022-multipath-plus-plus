@@ -48,8 +48,8 @@ try:
 except:
     pass
 last_checkpoint = get_last_file(models_path)
-#dataloader = get_dataloader(config["train"]["data_config"])
-#val_dataloader = get_dataloader(config["val"]["data_config"])
+dataloader = get_dataloader(config["train"]["data_config"])
+val_dataloader = get_dataloader(config["val"]["data_config"])
 model = MultiPathPP(config["model"])
 model.cuda()
 optimizer = Adam(model.parameters(), **config["train"]["optimizer"])
