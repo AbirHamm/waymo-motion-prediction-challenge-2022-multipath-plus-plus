@@ -42,6 +42,7 @@ alias = sys.argv[1].split("/")[-1].split(".")[0]
 print(alias)
 try:
     models_path = os.path.join("../models", f"{alias}__{get_git_revision_short_hash()}")
+    print("try")
     os.mkdir(tb_path)
     os.mkdir(models_path)
 except:
