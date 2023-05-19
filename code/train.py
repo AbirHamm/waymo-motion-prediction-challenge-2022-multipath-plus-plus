@@ -16,6 +16,7 @@ import glob
 import sys
 import random
 
+print("Abir")
 seed = 0
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
