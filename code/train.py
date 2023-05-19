@@ -37,7 +37,9 @@ def get_git_revision_short_hash() :
 
 
 config = get_config(sys.argv[1])
+print(config)
 alias = sys.argv[1].split("/")[-1].split(".")[0]
+print(alias)
 #try:
 models_path = os.path.join("../models", f"{alias}__{get_git_revision_short_hash()}")
 os.mkdir(tb_path)
