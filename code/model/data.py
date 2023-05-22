@@ -105,6 +105,7 @@ class MultiPathPPDataset(Dataset):
         self._config = config
         files = os.listdir(self._data_path)
         self._files = [os.path.join(self._data_path, f) for f in files]
+        print(self._files)
         random.shuffle(self._files)
         if "max_length" in config:
             self._files = self._files[:config["max_length"]]
