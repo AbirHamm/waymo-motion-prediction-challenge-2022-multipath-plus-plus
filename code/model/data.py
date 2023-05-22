@@ -102,6 +102,7 @@ def dict_to_cuda(d):
 class MultiPathPPDataset(Dataset):
     def __init__(self, config):
         self._data_path = config["data_path"]
+        print(self._data_path)
         self._config = config
         files = os.listdir(self._data_path)
         print(files)
