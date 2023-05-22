@@ -102,13 +102,13 @@ def dict_to_cuda(d):
 class MultiPathPPDataset(Dataset):
     def __init__(self, config):
         self._data_path = config["data_path"]
-        print(self._data_path)
+        #print(self._data_path)
         self._config = config
-        print(self._config)
+        #print(self._config)
         files = os.listdir(self._data_path)
-        print(files)
+        #print(files)
         self._files = [os.path.join(self._data_path, f) for f in files]
-        print(self._files)
+        #print(self._files)
         random.shuffle(self._files)
         if "max_length" in config:
             self._files = self._files[:config["max_length"]]
