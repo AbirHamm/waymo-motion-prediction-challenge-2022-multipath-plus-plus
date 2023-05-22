@@ -110,6 +110,7 @@ for epoch in tqdm(range(config["train"]["n_epochs"])):
             if config["train"]["scheduler"]:
                 saving_data["scheduler_state_dict"] = scheduler.state_dict()
             torch.save(saving_data, os.path.join(models_path, f"last.pth"))
+            print(f"last.pth")
         if num_steps % (len(dataloader) // 2) == 0 and this_num_steps > 0:
             del data
             torch.cuda.empty_cache()
