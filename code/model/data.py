@@ -104,6 +104,7 @@ class MultiPathPPDataset(Dataset):
         self._data_path = config["data_path"]
         print(self._data_path)
         self._config = config
+        print(self._config)
         files = os.listdir(self._data_path)
         print(files)
         self._files = [os.path.join(self._data_path, f) for f in files]
