@@ -133,7 +133,7 @@ for epoch in tqdm(range(config["train"]["n_epochs"])):
             }
             if config["train"]["scheduler"]:
                 saving_data["scheduler_state_dict"] = scheduler.state_dict()
-            torch.save(saving_data, os.path.join(models_path, f"{num_steps}.pth"))
+            #torch.save(saving_data, os.path.join(models_path, f"{num_steps}.pth"))
         num_steps += 1
         this_num_steps += 1
         if "max_iterations" in config["train"] and num_steps > config["train"]["max_iterations"]:
