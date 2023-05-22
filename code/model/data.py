@@ -104,6 +104,7 @@ class MultiPathPPDataset(Dataset):
         self._data_path = config["data_path"]
         self._config = config
         files = os.listdir(self._data_path)
+        print(files)
         self._files = [os.path.join(self._data_path, f) for f in files]
         print(self._files)
         random.shuffle(self._files)
